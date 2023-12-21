@@ -42,6 +42,7 @@ const List: React.FC<ListProps> = ({ nodes }) => {
             {node.comments.totalCount > 0 ? (
               <Link
                 href={node.url}
+                target='_blank'
                 rel='noopener noreferrer'
                 className='flex gap-1'
               >
