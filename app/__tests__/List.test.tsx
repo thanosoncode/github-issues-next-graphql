@@ -16,6 +16,11 @@ describe('List', () => {
     expect(listItems).toHaveLength(MOCK_NODES.length);
   });
 
+  it('should have correct amount of open issue icons based on mock nodes', () => {
+    const icons = screen.getAllByTestId('open-issue-icon');
+    expect(icons).toHaveLength(MOCK_NODES.length);
+  });
+
   it('should have correct title in each list item based on mock nodes', () => {
     const listItems = screen.getAllByTestId('link-item-title');
     listItems.forEach((item, index) => {
@@ -31,4 +36,19 @@ describe('List', () => {
       );
     });
   });
+});
+
+it('should have correct amount of closed issue icons based on mock nodes', () => {
+  render(
+    <List
+      nodes={[
+        ...MOCK_NODES.map((item) => ({
+          ...item,
+          node: { ...item.node, state: 'CLOSED' },
+        })),
+      ]}
+    />
+  );
+  const icons = screen.getAllByTestId('closed-issue-icon');
+  expect(icons).toHaveLength(MOCK_NODES.length);
 });

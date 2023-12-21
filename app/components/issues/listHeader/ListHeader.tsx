@@ -1,5 +1,5 @@
 'use client';
-import BulletIcon from '../../svg/BulletIcon';
+import OpenIssueIcon from '../../svg/OpenIssueIcon';
 import CheckIcon from '../../svg/CheckIcon';
 import { useRouter, useSearchParams } from 'next/navigation';
 
@@ -41,7 +41,7 @@ const ListHeader: React.FC<ListHeaderProps> = ({ openCount, closedCount }) => {
       data-testid='list-header'
     >
       <button className='flex gap-2 items-center' onClick={handleOpenClick}>
-        <BulletIcon variant='black' />{' '}
+        <OpenIssueIcon variant='black' />{' '}
         <span
           className={`${open ? 'font-semibold' : ''}`}
           data-testid='open-count-element'

@@ -1,7 +1,8 @@
 import { NodeItem } from '@/app/utils/types';
-import BulletIcon from '../../svg/BulletIcon';
+import OpenIssueIcon from '../../svg/OpenIssueIcon';
 import Link from 'next/link';
 import CommentIcon from '../../svg/CommentIcon';
+import CloseIssueIcon from '../../svg/ClosedIssueIcon';
 
 interface ListProps {
   nodes: NodeItem[];
@@ -12,6 +13,7 @@ const List: React.FC<ListProps> = ({ nodes }) => {
     <ul data-testid='list'>
       {nodes.map(({ node }, index) => {
         const isLast = index === nodes.length - 1;
+        const isOpen = node.state === 'OPEN';
         return (
           <li
             data-testid='list-item'
@@ -22,7 +24,11 @@ const List: React.FC<ListProps> = ({ nodes }) => {
           >
             <div className='flex gap-2'>
               <div className='mt-1'>
-                <BulletIcon variant='green' />
+                {isOpen ? (
+                  <OpenIssueIcon variant='green' />
+                ) : (
+                  <CloseIssueIcon />
+                )}
               </div>
               <div>
                 <Link

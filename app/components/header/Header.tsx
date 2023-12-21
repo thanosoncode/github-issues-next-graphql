@@ -1,4 +1,4 @@
-import BulletIcon from '../svg/BulletIcon';
+import OpenIssueIcon from '../svg/OpenIssueIcon';
 import GithubIcon from '../svg/GithubIcon';
 
 const Header = () => {
@@ -25,7 +25,7 @@ const Header = () => {
             className='font-semibold w-min gap2 h-12 px-3 flex gap-3 items-center justify-center border-b-2 border-red-color'
             data-testid='current-tab'
           >
-            <BulletIcon variant='black' />
+            <OpenIssueIcon variant='black' />
             Issues
           </li>
         </ul>
