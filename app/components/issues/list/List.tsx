@@ -9,11 +9,12 @@ interface ListProps {
 
 const List: React.FC<ListProps> = ({ nodes }) => {
   return (
-    <ul>
+    <ul data-testid='list'>
       {nodes.map(({ node }, index) => {
         const isLast = index === nodes.length - 1;
         return (
           <li
+            data-testid='list-item'
             key={node.id}
             className={`flex justify-between py-2 px-4 hover:bg-background-accent-color ${
               isLast ? '' : 'border-b border-border-color'
@@ -25,6 +26,7 @@ const List: React.FC<ListProps> = ({ nodes }) => {
               </div>
               <div>
                 <Link
+                  data-testid='link-item-title'
                   href={node.url}
                   target='_blank'
                   rel='noopener noreferrer'
@@ -46,7 +48,9 @@ const List: React.FC<ListProps> = ({ nodes }) => {
                 <span className='mt-0.5'>
                   <CommentIcon />
                 </span>
-                <span>{node.comments.totalCount}</span>
+                <span data-testid='comment-count'>
+                  {node.comments.totalCount}
+                </span>
               </Link>
             ) : null}
           </li>

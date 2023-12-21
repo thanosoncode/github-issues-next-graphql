@@ -10,7 +10,7 @@ interface PaginationProps {
 const Pagination: React.FC<PaginationProps> = ({ pageInfo }) => {
   const router = useRouter();
   const searchParams = useSearchParams();
-  const open = searchParams.get('open');
+  const open = searchParams?.get('open');
 
   const { hasNextPage, hasPreviousPage, startCursor, endCursor } = pageInfo;
 
@@ -31,8 +31,9 @@ const Pagination: React.FC<PaginationProps> = ({ pageInfo }) => {
   };
 
   return (
-    <div className='flex gap-6 justify-center'>
+    <div className='flex gap-6 justify-center' data-testid='pagination'>
       <button
+        data-testid='previous-button'
         onClick={handlePreviousClick}
         disabled={!hasPreviousPage}
         className={`flex gap-2 items-center py-1 px-2 rounded-md border border-transparent duration-200 ${
@@ -45,6 +46,7 @@ const Pagination: React.FC<PaginationProps> = ({ pageInfo }) => {
         Previous
       </button>
       <button
+        data-testid='next-button'
         onClick={handleNextClick}
         disabled={!hasNextPage}
         className={`flex gap-2 items-center py-1 px-2 rounded-md border border-transparent duration-200 ${
