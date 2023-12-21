@@ -10,5 +10,9 @@ This is a mini Github-Issues-Page clone of reactjs repository using Nextjs and G
 npm install
 npm run dev
 ```
+You can run the tests with
 
-
+```bash
+npm test
+```
+Check out live version [here](https://react-issues-next-graphql.vercel.app/)
