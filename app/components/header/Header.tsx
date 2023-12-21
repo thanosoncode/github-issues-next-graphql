@@ -3,9 +3,9 @@ import GithubIcon from '../svg/GithubIcon';
 
 const Header = () => {
   return (
-    <header className='text-sm pt-4 px-4 bg-background-accent-color border border-bottom border-border-color mb-6'>
+    <header className='text-sm pt-4 px-4 bg-background-accent-color border border-bottom border-border-color mb-12'>
       <div className='flex gap-4 items-center mb-2'>
-        <GithubIcon />
+        <GithubIcon variant='black' />
         <nav>
           <ul className='flex gap-2'>
             <li>reactjs</li>

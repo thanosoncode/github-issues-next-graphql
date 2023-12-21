@@ -73,7 +73,7 @@ const Issues: React.FC<IssuesProps> = async ({
   })) as IssuesQuery;
 
   if (!data || !data.repository) {
-    return <div>Something went wrong</div>;
+    return <div className='ml-8 mt-12'>Something went wrong</div>;
   }
 
   return (

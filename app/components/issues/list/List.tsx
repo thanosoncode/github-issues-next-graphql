@@ -38,7 +38,11 @@ const List: React.FC<ListProps> = ({ nodes }) => {
               </div>
             </div>
             {node.comments.totalCount > 0 ? (
-              <Link href={node.url} className='flex gap-1'>
+              <Link
+                href={node.url}
+                rel='noopener noreferrer'
+                className='flex gap-1'
+              >
                 <span className='mt-0.5'>
                   <CommentIcon />
                 </span>
