@@ -7,7 +7,7 @@ export const GET_AFTER_ISSUES = `
       closedIssues: issues(states: CLOSED) {
         totalCount
       }  
-      issues(first: 10, states: OPEN, after: $cursor, orderBy: { field: CREATED_AT, direction: DESC }) {
+      issues(first: 8, states: OPEN, after: $cursor, orderBy: { field: CREATED_AT, direction: DESC }) {
         edges {
           node {
             id
@@ -44,7 +44,7 @@ export const GET_BEFORE_ISSUES = `
       closedIssues: issues(states: CLOSED) {
         totalCount
       }
-      issues(last: 10, states: OPEN, before: $cursor, orderBy: { field: CREATED_AT, direction: DESC }) {
+      issues(last: 8, states: OPEN, before: $cursor, orderBy: { field: CREATED_AT, direction: DESC }) {
         edges {
           node {
             id
@@ -81,7 +81,7 @@ export const GET_AFTER_ISSUES_CLOSED = `
       closedIssues: issues(states: CLOSED) {
         totalCount
       }  
-      issues(first: 10, states: CLOSED, after: $cursor, orderBy: { field: CREATED_AT, direction: DESC }) {
+      issues(first: 8, states: CLOSED, after: $cursor, orderBy: { field: CREATED_AT, direction: DESC }) {
         edges {
           node {
             id
@@ -118,7 +118,7 @@ export const GET_BEFORE_ISSUES_CLOSED = `
       closedIssues: issues(states: CLOSED) {
         totalCount
       }
-      issues(last: 10, states: CLOSED, before: $cursor, orderBy: { field: CREATED_AT, direction: DESC }) {
+      issues(last: 8, states: CLOSED, before: $cursor, orderBy: { field: CREATED_AT, direction: DESC }) {
         edges {
           node {
             id
