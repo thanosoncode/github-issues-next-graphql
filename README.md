@@ -1,6 +1,6 @@
 This is a mini Github-Issues-Page clone of reactjs repository using Nextjs and GraphQL 
 
-### Getting Started
+### 🛠️ Getting Started 
 
 1. Get your [github token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens) 
 
@@ -10,5 +10,10 @@ This is a mini Github-Issues-Page clone of reactjs repository using Nextjs and G
 npm install
 npm run dev
 ```
+### 🧪 Run the tests 
 
+```bash
+npm test
+```
+### 🚀 Live version [here](https://react-issues-next-graphql.vercel.app/) 
 
